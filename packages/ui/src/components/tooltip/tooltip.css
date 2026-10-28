@@ -1,0 +1,48 @@
+.indigo-tooltip-wrapper {
+  position: relative;
+  display: inline-flex;
+}
+
+.indigo-tooltip {
+  position: absolute;
+  z-index: 1600;
+  padding: 6px 10px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #fff;
+  background: #424242;
+  border-radius: 6px;
+  white-space: nowrap;
+  pointer-events: none;
+  animation: indigo-tooltip-in 100ms ease;
+}
+
+.indigo-tooltip--top {
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+.indigo-tooltip--bottom {
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+.indigo-tooltip--left {
+  right: calc(100% + 8px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+.indigo-tooltip--right {
+  left: calc(100% + 8px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@keyframes indigo-tooltip-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

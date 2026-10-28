@@ -1,0 +1,75 @@
+/* ══════════════════════════════════════════════════════════
+   @headless-aem/renderer — Base Grid CSS
+   
+   Import this in your project:
+     import '@headless-aem/renderer/styles/grid.css';
+   
+   Or copy and customize.
+   
+   Uses a 12-column CSS Grid.
+   Breakpoints: 768px (tablet), 1024px (desktop).
+   Projects can override these via their own CSS.
+   ══════════════════════════════════════════════════════════ */
+
+/* ── Section grid container ── */
+.aem-section-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  width: 100%;
+}
+
+/* ── full: 12 cols everywhere ── */
+.aem-span-full {
+  grid-column: span 12;
+}
+
+/* ── twoThird: 12 → 12 → 8 ── */
+.aem-span-twoThird {
+  grid-column: span 12;
+}
+
+/* ── half: 12 → 12 → 6 ── */
+.aem-span-half {
+  grid-column: span 12;
+}
+
+/* ── third: 12 → 12 → 4 ── */
+.aem-span-third {
+  grid-column: span 12;
+}
+
+/* ── quarter: 6 → 6 → 3 ── */
+.aem-span-quarter {
+  grid-column: span 6;
+}
+
+/* ── auto: 12 cols (FE decides) ── */
+.aem-span-auto {
+  grid-column: span 12;
+}
+
+/* ── Tablet (≥768px) ── */
+@media (min-width: 768px) {
+  .aem-span-half {
+    grid-column: span 6;
+  }
+  .aem-span-quarter {
+    grid-column: span 6;
+  }
+}
+
+/* ── Desktop (≥1024px) ── */
+@media (min-width: 1024px) {
+  .aem-span-twoThird {
+    grid-column: span 8;
+  }
+  .aem-span-half {
+    grid-column: span 6;
+  }
+  .aem-span-third {
+    grid-column: span 4;
+  }
+  .aem-span-quarter {
+    grid-column: span 3;
+  }
+}

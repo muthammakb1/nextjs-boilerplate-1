@@ -1,0 +1,74 @@
+.indigo-accordion {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.indigo-accordion__item {
+  border-bottom: 1px solid #e0e0e0;
+}
+.indigo-accordion__item:last-child {
+  border-bottom: none;
+}
+
+.indigo-accordion__trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  background: #fff;
+  cursor: pointer;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #212121;
+  font-family: inherit;
+  text-align: left;
+  transition: background-color 150ms ease;
+}
+.indigo-accordion__trigger:hover:not(:disabled) {
+  background-color: #fafafa;
+}
+.indigo-accordion__trigger:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.indigo-accordion__title {
+  flex: 1;
+}
+
+.indigo-accordion__icon {
+  font-size: 0.625rem;
+  color: #757575;
+  transition: transform 200ms ease;
+}
+.indigo-accordion__icon--expanded {
+  transform: rotate(180deg);
+}
+.indigo-accordion__divider {
+  height: rem(1px);
+  background: rgba(255, 255, 255, 0.1);
+  margin: 0;
+}
+
+.indigo-accordion__panel {
+  animation: indigo-accordion-expand 200ms ease;
+}
+
+.indigo-accordion__content {
+  padding: 0 16px 16px;
+  font-size: 0.875rem;
+  color: #424242;
+  line-height: 1.6;
+}
+
+@keyframes indigo-accordion-expand {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

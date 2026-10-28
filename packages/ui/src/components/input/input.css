@@ -1,0 +1,85 @@
+.indigo-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.indigo-input-wrapper--full-width {
+  width: 100%;
+}
+
+.indigo-input__label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #424242;
+}
+
+.indigo-input__container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #bdbdbd;
+  border-radius: 8px;
+  background-color: #fff;
+  transition:
+    border-color 150ms ease,
+    box-shadow 150ms ease;
+}
+.indigo-input__container:focus-within {
+  border-color: #3f51b5;
+  box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.15);
+}
+.indigo-input__container--error {
+  border-color: #f44336;
+}
+.indigo-input__container--error:focus-within {
+  box-shadow: 0 0 0 2px rgba(244, 67, 54, 0.15);
+}
+
+.indigo-input__container--sm {
+  min-height: 32px;
+}
+.indigo-input__container--md {
+  min-height: 40px;
+}
+.indigo-input__container--lg {
+  min-height: 48px;
+}
+
+.indigo-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 8px 12px;
+  font-size: 0.875rem;
+  font-family: inherit;
+  color: #212121;
+  width: 100%;
+}
+.indigo-input::placeholder {
+  color: #9e9e9e;
+}
+
+.indigo-input__adornment--start,
+.indigo-input__adornment--end {
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  color: #757575;
+}
+.indigo-input__adornment--start {
+  padding-left: 12px;
+}
+.indigo-input__adornment--end {
+  padding-right: 12px;
+}
+
+.indigo-input__error {
+  font-size: 0.75rem;
+  color: #f44336;
+  margin: 0;
+}
+.indigo-input__helper {
+  font-size: 0.75rem;
+  color: #757575;
+  margin: 0;
+}

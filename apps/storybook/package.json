@@ -1,0 +1,11 @@
+{
+  "name": "@indigo-shared-lib/storybook",
+  "version": "0.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "clean": "rimraf storybook-static"
+  }
+}

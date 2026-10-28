@@ -1,0 +1,1 @@
+export const CIAM_REFRESH_TOKEN = 'CIAM_REFRESH_TOKEN';

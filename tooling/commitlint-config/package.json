@@ -1,0 +1,12 @@
+{
+  "name": "@indigo-shared-lib/commitlint-config",
+  "version": "0.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "@commitlint/config-conventional": "^19.0.0"
+  }
+}

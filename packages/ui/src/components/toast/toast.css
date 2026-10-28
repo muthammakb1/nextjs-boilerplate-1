@@ -1,0 +1,124 @@
+.indigo-toast-container {
+  position: fixed;
+  z-index: 1700;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  pointer-events: none;
+}
+
+.indigo-toast-container--top-right {
+  top: 0;
+  right: 0;
+}
+.indigo-toast-container--top-left {
+  top: 0;
+  left: 0;
+}
+.indigo-toast-container--bottom-right {
+  bottom: 0;
+  right: 0;
+}
+.indigo-toast-container--bottom-left {
+  bottom: 0;
+  left: 0;
+}
+.indigo-toast-container--top-center {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.indigo-toast-container--bottom-center {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.indigo-toast {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-width: 300px;
+  max-width: 480px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  pointer-events: all;
+  animation: indigo-toast-in 200ms ease;
+}
+
+.indigo-toast--info {
+  background: #e3f2fd;
+  color: #1565c0;
+  border-left: 4px solid #2196f3;
+}
+.indigo-toast--success {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border-left: 4px solid #4caf50;
+}
+.indigo-toast--warning {
+  background: #fff3e0;
+  color: #e65100;
+  border-left: 4px solid #ff9800;
+}
+.indigo-toast--error {
+  background: #ffebee;
+  color: #c62828;
+  border-left: 4px solid #f44336;
+}
+
+.indigo-toast__message {
+  flex: 1;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.indigo-toast__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.indigo-toast__action {
+  background: none;
+  border: none;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  color: inherit;
+  padding: 0;
+}
+
+.indigo-toast__dismiss {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 4px;
+  color: inherit;
+  opacity: 0.7;
+  font-size: 0.75rem;
+}
+.indigo-toast__dismiss:hover {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+@keyframes indigo-toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

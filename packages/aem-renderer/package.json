@@ -1,0 +1,30 @@
+{
+  "name": "@commericalwebsite/aem-renderer",
+  "version": "1.0.0",
+  "description": "Framework-agnostic AEM Headless layout renderer for Next.js — AEM decides what/where, Next.js decides how.",
+  "private": true,
+  "main": "src/index.js",
+  "module": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./styles/grid.css": "./src/styles/grid.css",
+    "./styles/grid.module.css": "./src/styles/grid.module.css"
+  },
+  "files": [
+    "src/"
+  ],
+  "keywords": [
+    "aem",
+    "headless",
+    "nextjs",
+    "react",
+    "layout",
+    "cms",
+    "renderer"
+  ],
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "license": "MIT"
+}

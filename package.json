@@ -1,0 +1,104 @@
+{
+  "name": "@commericalwebsite/indigo-shared-lib",
+  "version": "0.29.0",
+  "description": "Shared frontend library for Indigo applications",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CommericalWebsite/indigo-shared-lib.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "packageManager": "npm@11.14.1",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "exports": {
+    "./ui": {
+      "import": "./dist/ui/index.mjs",
+      "require": "./dist/ui/index.js"
+    },
+    "./ui/styles.css": "./dist/ui/styles.css",
+    "./hooks": {
+      "import": "./dist/hooks/index.mjs",
+      "require": "./dist/hooks/index.js"
+    },
+    "./tokens": {
+      "import": "./dist/tokens/index.mjs",
+      "require": "./dist/tokens/index.js"
+    },
+    "./utils": {
+      "import": "./dist/utils/index.mjs",
+      "require": "./dist/utils/index.js"
+    },
+    "./datadog": "./packages/datadog/index.js",
+    "./analytics": "./packages/analytics/index.js",
+    "./aem-renderer": {
+      "import": "./dist/aem-renderer/index.mjs",
+      "require": "./dist/aem-renderer/index.js"
+    },
+    "./aem-renderer/styles/grid.css": "./dist/aem-renderer/styles/grid.css",
+    "./aem-renderer/styles/grid.module.css": "./dist/aem-renderer/styles/grid.module.css"
+  },
+  "files": [
+    "dist",
+    "packages/datadog/*.js",
+    "packages/analytics/*.js"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "format": "prettier --write \"**/*.{js,jsx,json,md,css}\"",
+    "format:check": "prettier --check \"**/*.{js,jsx,json,md,css}\"",
+    "test": "vitest run",
+    "test:watch": "vitest watch",
+    "clean": "rimraf dist",
+    "prepublishOnly": "npm run build",
+    "storybook": "storybook dev -p 6006 -c apps/storybook/.storybook",
+    "storybook:build": "storybook build -c apps/storybook/.storybook",
+    "prepare": "husky"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "crypto-js": "^4.2.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.0.0",
+    "@commitlint/config-conventional": "^19.0.0",
+    "@testing-library/jest-dom": "^6.4.0",
+    "@testing-library/react": "^15.0.0",
+    "@testing-library/user-event": "^14.5.0",
+    "husky": "^9.0.0",
+    "jsdom": "^24.0.0",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@storybook/addon-a11y": "8.4.7",
+    "@storybook/addon-essentials": "8.4.7",
+    "@storybook/addon-interactions": "8.4.7",
+    "@storybook/addon-links": "8.4.7",
+    "@storybook/blocks": "8.4.7",
+    "@storybook/react": "8.4.7",
+    "@storybook/react-vite": "8.4.7",
+    "rimraf": "^5.0.0",
+    "storybook": "8.4.7",
+    "tsup": "^8.0.0",
+    "vitest": "^1.6.0"
+  }
+}
