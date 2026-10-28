@@ -1,37 +1,3 @@
-# Dependencies
 node_modules/
-
-# Build outputs
-dist/
-build/
-*.tsbuildinfo
-
-# Storybook
-storybook-static/
-
-# IDE
-.idea/
-*.swp
-*.swo
-.vscode/settings.json
-.vscode/
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Environment
-.env
-.env.local
-.env.*.local
-
-# Turbo
-.turbo/
-
-# Coverage
-coverage/
-
-# Logs
-*.log
-npm-debug.log*
-pnpm-debug.log*
+.next/
+.env*
